@@ -1,0 +1,14 @@
+$ xcode-select -p
+/Library/Developer/CommandLineTools
+
+$ git --version
+git version 2.54.0 (Apple Git-157)
+
+$ git -C . init -b main
+Initialized repository on branch main
+
+$ git config --local --list --show-origin (user.email masked)
+file:.git/config	user.name=hyoee78
+file:.git/config	user.email=<masked>
+
+Repository-local identity is set to the values supplied by the owner. The email is intentionally masked in this evidence file.

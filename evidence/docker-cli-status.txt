@@ -1,0 +1,9 @@
+초기 진단 (Codex 제한 셸, Docker Desktop 통합 터미널 활성화 전):
+
+$ docker --version
+Docker version 29.9.2, build a82e528
+
+$ docker info --format '{{.ServerVersion}}'
+permission denied while trying to connect to the docker API at unix:///<user-home>/.docker/run/docker.sock
+
+이후 Docker Desktop에서 Resume를 눌러 Engine running을 확인하고, 호스트 터미널을 활성화한 다음 docker info가 29.9.2를 반환했습니다. 이 파일은 초기 실행 환경 차이를 보존합니다.
