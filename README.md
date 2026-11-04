@@ -1,6 +1,6 @@
 # 개발 워크스테이션 구축 미션 (macOS)
 
-> 진행 상태: **진행 중**. 터미널/권한, Docker, 저장소 로컬 Git 초기화와 사용자 설정을 완료했습니다. GitHub 공개 저장소 origin을 연결했습니다. 최초 원격 커밋과 로컬 과제 커밋을 병합했고, Push 여부는 아직 확인 중입니다. VS Code 설치 및 연동은 남아 있습니다.
+> 진행 상태: **진행 중**. 터미널/권한, Docker, 저장소 로컬 Git 초기화와 사용자 설정을 완료했습니다. 공개 GitHub `Mission-1`을 origin으로 연결하고 기존 원격 초기 커밋을 보존해 병합했습니다. HTTPS Push는 계정 인증을 기다리고 있습니다. VS Code 설치 및 연동도 남아 있습니다.
 
 ## 프로젝트 개요
 
@@ -33,7 +33,8 @@
 - [ ] 주소창이 보이는 브라우저 스크린샷을 저장소에 추가
 - [x] Apple Command Line Tools 설치 후 Git 버전/로컬 설정 기록
 - [ ] VS Code 설치 및 GitHub 로그인/연동
-- [ ] 공개 Mission-1 원격 저장소 생성/연결 및 Push
+- [x] 공개 Mission-1 원격 저장소 확인/연결 및 기존 이력 병합
+- [ ] Mission-1로 인증 후 Push
 - [x] 실제 Docker 문제 해결 2건 이상 기록
 
 ## 폴더 구조
@@ -131,7 +132,7 @@ persistent-data
 
 ## Git, GitHub, VS Code
 
-Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 민감할 수 있는 이메일 값은 증거 파일에서 마스킹했습니다. VS Code는 아직 설치되지 않았습니다. 공개 GitHub 저장소 이름은 Mission-1로 지정받았으며, 계정 인증 및 원격 Push는 연동 후 수행합니다. 비밀번호/토큰/인증 코드는 문서화하지 않습니다.
+Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 이메일은 증거 파일에서 마스킹했습니다. 공개 GitHub `hyoee78/Mission-1` 원격 저장소가 존재하며, 원격의 기존 README 초기 커밋을 보존해 로컬 과제 커밋과 병합했습니다. HTTPS Push를 시도했지만 인증 정보가 설정되지 않아 로그인 대기 상태입니다. VS Code는 아직 설치되지 않았습니다. 비밀번호/토큰/인증 코드는 문서나 로그에 기록하지 않습니다.
 
 ## 재현과 증거
 
