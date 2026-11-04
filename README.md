@@ -1,6 +1,6 @@
 # 개발 워크스테이션 구축 미션 (macOS)
 
-> 진행 상태: **진행 중**. 터미널/권한, Docker, 저장소 로컬 Git 초기화와 사용자 설정을 완료했습니다. 공개 GitHub `Mission-1`을 origin으로 연결하고 기존 원격 초기 커밋을 보존해 병합했습니다. HTTPS Push는 계정 인증을 기다리고 있습니다. VS Code 설치 및 연동도 남아 있습니다.
+> 진행 상태: **진행 중**. 터미널/권한, Docker, 로컬 Git 설정과 공개 GitHub `Mission-1` Push를 완료했습니다. 원격 `main`과 로컬 커밋 해시가 일치하고 작업 트리가 깨끗한 것을 확인했습니다. 주소창 포함 브라우저 캡처와 VS Code 연동은 남아 있습니다.
 
 ## 프로젝트 개요
 
@@ -15,7 +15,8 @@
 | Docker CLI | 29.9.2, build a82e528 |
 | Docker Desktop | 4.97.0; 엔진은 Resource Saver에서 재개했고 현재 CLI 명령이 정상 실행됨 |
 | Docker Engine | 29.9.2 |
-| Git | 설치 shim은 있으나 개발자 도구 부재로 git --version이 xcode-select 오류 반환 |
+| Git | 2.54.0 (Apple Git-157); main 브랜치 저장소와 로컬 사용자 설정 완료 |
+| GitHub CLI | 2.103.2; hyoee78로 인증해 Mission-1에 Push |
 | VS Code | 아직 설치되지 않음; code 명령 없음 |
 
 ## 체크리스트
@@ -34,7 +35,7 @@
 - [x] Apple Command Line Tools 설치 후 Git 버전/로컬 설정 기록
 - [ ] VS Code 설치 및 GitHub 로그인/연동
 - [x] 공개 Mission-1 원격 저장소 확인/연결 및 기존 이력 병합
-- [ ] Mission-1로 인증 후 Push
+- [x] Mission-1 인증 및 main 브랜치 Push/원격 해시 검증
 - [x] 실제 Docker 문제 해결 2건 이상 기록
 
 ## 폴더 구조
@@ -57,6 +58,7 @@ workstation-mission/
     ├── docker-cli-status.txt
     ├── docker-practice.log.txt
     ├── git-local-status.txt
+    ├── github-push-status.txt
     └── web-8080-content.png
 ~~~
 
@@ -132,7 +134,7 @@ persistent-data
 
 ## Git, GitHub, VS Code
 
-Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 이메일은 증거 파일에서 마스킹했습니다. 공개 GitHub `hyoee78/Mission-1` 원격 저장소가 존재하며, 원격의 기존 README 초기 커밋을 보존해 로컬 과제 커밋과 병합했습니다. HTTPS Push를 시도했지만 인증 정보가 설정되지 않아 로그인 대기 상태입니다. VS Code는 아직 설치되지 않았습니다. 비밀번호/토큰/인증 코드는 문서나 로그에 기록하지 않습니다.
+Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 이메일은 증거 파일에서 마스킹했습니다. GitHub CLI 2.103.2로 hyoee78 계정을 인증하고 공개 `hyoee78/Mission-1` 원격 저장소에 Push했습니다. 원격의 기존 README 초기 커밋은 병합해 보존했습니다. `git ls-remote`의 main 해시가 로컬 HEAD와 일치하고 `git status --short`가 비어 있음을 확인했습니다. Push 결과는 [GitHub Push 증거](evidence/github-push-status.txt)에 있습니다. VS Code는 아직 설치되지 않았습니다. 비밀번호/토큰/인증 코드는 문서나 로그에 기록하지 않습니다.
 
 ## 재현과 증거
 

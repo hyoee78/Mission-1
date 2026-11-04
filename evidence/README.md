@@ -8,6 +8,8 @@
 - [x] Named volume contents remain after container deletion
 - [x] Browser page screenshot: web-8080-content.png (Firefox capture tool; page content only)
 - [ ] Browser screenshot with address bar and response visible together
-- [ ] Git and VS Code/GitHub integration proof
+- [x] Git local config: ../README.md and git-local-status.txt (email masked)
+- [x] GitHub public repo Push and remote hash: github-push-status.txt
+- [ ] VS Code/GitHub integration screenshot
 
 Do not add credentials, tokens, passwords, private keys, or one-time codes.

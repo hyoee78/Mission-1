@@ -1,0 +1,18 @@
+$ git push -u origin main
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (29/29), 76.32 KiB | 15.26 MiB/s, done.
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/hyoee78/Mission-1.git
+   0007b87..03d1fea  main -> main
+branch 'main' set up to track 'origin/main'.
+
+$ git rev-parse HEAD
+03d1fea5286614f1da43587f4ef94794f51f5513
+
+$ git status --short
+(no output; working tree clean)
+
+$ git ls-remote origin refs/heads/main
+03d1fea5286614f1da43587f4ef94794f51f5513	refs/heads/main
