@@ -1,0 +1,26 @@
+GitHub SSH setup verification (2026-11-04)
+
+Key handling
+- ED25519 private key: ~/.ssh/id_ed25519_github (kept on this Mac; never committed)
+- Public key registered with GitHub account: hyoee78
+- SSH agent/keychain setup: AddKeysToAgent yes, UseKeychain yes
+- Fingerprint: SHA256:Met+IMCBej/qniPG6pc+7TsDiHctnIL9+iChbtpIXMI
+
+$ ssh-add -l -E sha256
+256 SHA256:Met+IMCBej/qniPG6pc+7TsDiHctnIL9+iChbtpIXMI hyoeejoung@gmail.com (ED25519)
+
+$ ssh -T git@github.com
+Hi hyoee78! You've successfully authenticated, but GitHub does not provide shell access.
+
+$ git remote -v
+origin  git@github.com:hyoee78/Mission-1.git (fetch)
+origin  git@github.com:hyoee78/Mission-1.git (push)
+
+$ git ls-remote origin refs/heads/main
+79d76a65c4fe290b3c834ac6165becb27ef973a7 refs/heads/main
+
+$ git rev-parse HEAD
+79d76a65c4fe290b3c834ac6165becb27ef973a7
+
+The remote lookup used SSH and returned the same main commit as the local checkout.
+No private key, passphrase, access token, or one-time code is included here.

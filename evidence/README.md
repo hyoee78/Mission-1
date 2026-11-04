@@ -11,5 +11,6 @@
 - [x] Git local config: ../README.md and git-local-status.txt (email masked)
 - [x] GitHub public repo Push and remote hash: github-push-status.txt
 - [x] VS Code GitHub account integration verified in the Accounts menu and GitHub extension view: vscode-github-status.txt and vscode-github-account.jpg
+- [x] GitHub SSH public key registration, SSH authentication, and SSH remote lookup: github-ssh-status.txt
 
 Do not add credentials, tokens, passwords, private keys, or one-time codes.

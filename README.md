@@ -36,6 +36,7 @@
 - [x] VS Code 설치, 과제 저장소 열기, GitHub 계정 `hyoee78` 로그인 확인
 - [x] 공개 Mission-1 원격 저장소 확인/연결 및 기존 이력 병합
 - [x] Mission-1 인증 및 main 브랜치 Push/원격 해시 검증
+- [x] SSH 공개 키 등록, SSH 인증 및 SSH 방식 원격 조회
 - [x] 실제 Docker 문제 해결 2건 이상 기록
 
 ## 폴더 구조
@@ -138,6 +139,10 @@ persistent-data
 ## Git, GitHub, VS Code
 
 Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 이메일은 증거 파일에서 마스킹했습니다. GitHub CLI 2.103.2로 hyoee78 계정을 인증하고 공개 `hyoee78/Mission-1` 원격 저장소에 Push했습니다. 원격의 기존 README 초기 커밋은 병합해 보존했습니다. `git ls-remote`의 main 해시가 로컬 HEAD와 일치하고 `git status --short`가 비어 있음을 확인했습니다. Push 결과는 [GitHub Push 증거](evidence/github-push-status.txt)에 있습니다. VS Code 1.144.1을 설치해 과제 폴더를 열고 공식 GitHub Pull Requests 확장을 설치했습니다. VS Code 계정 메뉴에 `hyoee78 (GitHub)`가 표시되고 GitHub 뷰에 Pull Requests/Issues 항목이 나타나는 것으로 인증을 확인했습니다. [VS Code 연동 확인 기록](evidence/vscode-github-status.txt)과 [GitHub 로그인 화면 캡처](evidence/vscode-github-account.jpg)를 참고하세요. 비밀번호/토큰/인증 코드는 문서나 로그에 기록하지 않습니다.
+
+### SSH 푸시 보너스
+
+ED25519 키 쌍을 Mac의 `~/.ssh/id_ed25519_github`에 만들고 개인 키는 로컬에 보관했습니다. GitHub 계정에는 공개 키만 등록했습니다. SSH config에서 키체인 연동(`UseKeychain`, `AddKeysToAgent`)을 설정하고 `ssh-add --apple-use-keychain`으로 에이전트에 추가했습니다. `ssh -T git@github.com`에서 `hyoee78` 인증 성공 메시지를 확인한 뒤 저장소 원격을 `git@github.com:hyoee78/Mission-1.git`로 변경했습니다. SSH를 통한 `git ls-remote`가 성공했고 원격 `main` 해시가 로컬 HEAD와 일치합니다. 명령과 출력은 [SSH 검증 기록](evidence/github-ssh-status.txt)을 참고하세요. 개인 키와 암호는 저장소에 포함하지 않았습니다.
 
 ## 재현과 증거
 
