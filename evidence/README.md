@@ -12,5 +12,6 @@
 - [x] GitHub public repo Push and remote hash: github-push-status.txt
 - [x] VS Code GitHub account integration verified in the Accounts menu and GitHub extension view: vscode-github-status.txt and vscode-github-account.jpg
 - [x] GitHub SSH public key registration, SSH authentication, and SSH remote lookup: github-ssh-status.txt
+- [x] Host port occupancy diagnosis and named volume archive/restore verification: docker-operations-followup.txt and workstation-mission-data.tar.gz
 
 Do not add credentials, tokens, passwords, private keys, or one-time codes.
