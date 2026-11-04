@@ -1,6 +1,6 @@
 # 개발 워크스테이션 구축 미션 (macOS)
 
-> 진행 상태: 핵심 실습과 GitHub 연동을 완료했습니다. 공개 `hyoee78/Mission-1`에 프로젝트를 Push했고 VS Code에 저장소를 열어 GitHub 계정 `hyoee78` 로그인을 확인했습니다. 브라우저 주소창 포함 캡처 파일은 이 환경에서 저장하지 못해 아래 증거 체크리스트에 미완료로 표시했습니다.
+> 진행 상태: 핵심 실습과 GitHub 연동을 완료했습니다. 공개 `hyoee78/Mission-1`에 프로젝트를 Push했고 VS Code에 저장소를 열어 GitHub 계정 `hyoee78` 로그인을 확인했습니다. 주소창을 포함한 브라우저 접속 캡처와 VS Code GitHub 로그인 캡처도 증거 폴더에 추가했습니다.
 
 ## 프로젝트 개요
 
@@ -31,7 +31,7 @@
 - [x] 8080, 8081 호스트 포트에서 HTTP 200 응답 확인
 - [x] 바인드 마운트 파일 변경 반영 확인
 - [x] 컨테이너 삭제 뒤 named volume 데이터 유지 확인
-- [ ] 주소창과 웹 응답이 함께 보이는 브라우저 스크린샷 파일 추가 (브라우저 응답 자체는 확인)
+- [x] 주소창과 웹 응답이 함께 보이는 브라우저 스크린샷 추가
 - [x] Apple Command Line Tools 설치 후 Git 버전/로컬 설정 기록
 - [x] VS Code 설치, 과제 저장소 열기, GitHub 계정 `hyoee78` 로그인 확인
 - [x] 공개 Mission-1 원격 저장소 확인/연결 및 기존 이력 병합
@@ -59,6 +59,8 @@ workstation-mission/
     ├── docker-practice.log.txt
     ├── git-local-status.txt
     ├── github-push-status.txt
+    ├── browser-port-8080.jpg
+    ├── vscode-github-account.jpg
     ├── vscode-github-status.txt
     └── web-8080-content.png
 ~~~
@@ -110,7 +112,7 @@ $ curl -i http://localhost:8081
 HTTP/1.1 200 OK
 ~~~
 
-Docker 실습 로그에는 두 응답의 전체 헤더와 HTML, images, ps, logs, stats 결과가 있습니다. 포트 매핑은 호스트 포트 8080/8081 요청을 컨테이너의 NGINX 80번 포트로 전달합니다. 브라우저에서 http://localhost:8080도 열어 응답을 확인했고, 페이지 캡처는 [브라우저 화면](evidence/web-8080-content.png)에서 확인할 수 있습니다. 기존 캡처에는 브라우저 주소창이 포함되지 않습니다. 화면에서 주소가 `http://localhost:8080`인 상태의 응답을 확인했으나, 주소창이 보이는 캡처 파일은 저장하지 못해 제출 증거로 추가하지 않았습니다.
+Docker 실습 로그에는 두 응답의 전체 헤더와 HTML, images, ps, logs, stats 결과가 있습니다. 포트 매핑은 호스트 포트 8080/8081 요청을 컨테이너의 NGINX 80번 포트로 전달합니다. 브라우저에서 http://localhost:8080도 열어 응답을 확인했고, 페이지 캡처는 [브라우저 화면](evidence/web-8080-content.png)에서 확인할 수 있습니다. 주소창에 `http://localhost:8080`과 페이지 응답이 함께 보이는 [브라우저 접속 캡처](evidence/browser-port-8080.jpg)를 첨부했습니다.
 
 ## 바인드 마운트와 영속 볼륨
 
@@ -135,7 +137,7 @@ persistent-data
 
 ## Git, GitHub, VS Code
 
-Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 이메일은 증거 파일에서 마스킹했습니다. GitHub CLI 2.103.2로 hyoee78 계정을 인증하고 공개 `hyoee78/Mission-1` 원격 저장소에 Push했습니다. 원격의 기존 README 초기 커밋은 병합해 보존했습니다. `git ls-remote`의 main 해시가 로컬 HEAD와 일치하고 `git status --short`가 비어 있음을 확인했습니다. Push 결과는 [GitHub Push 증거](evidence/github-push-status.txt)에 있습니다. VS Code 1.144.1을 설치해 과제 폴더를 열고 공식 GitHub Pull Requests 확장을 설치했습니다. VS Code 계정 메뉴에 `hyoee78 (GitHub)`가 표시되고 GitHub 뷰에 Pull Requests/Issues 항목이 나타나는 것으로 인증을 확인했습니다. [VS Code 연동 확인 기록](evidence/vscode-github-status.txt)을 참고하세요. 비밀번호/토큰/인증 코드는 문서나 로그에 기록하지 않습니다.
+Apple Command Line Tools를 설치했고 git version 2.54.0 (Apple Git-157)을 확인했습니다. 과제 폴더에 main 브랜치로 별도 저장소를 초기화하고, 제공받은 Git 사용자 이름과 이메일을 로컬 설정에 저장했습니다. `git config --list --show-origin`의 이메일은 증거 파일에서 마스킹했습니다. GitHub CLI 2.103.2로 hyoee78 계정을 인증하고 공개 `hyoee78/Mission-1` 원격 저장소에 Push했습니다. 원격의 기존 README 초기 커밋은 병합해 보존했습니다. `git ls-remote`의 main 해시가 로컬 HEAD와 일치하고 `git status --short`가 비어 있음을 확인했습니다. Push 결과는 [GitHub Push 증거](evidence/github-push-status.txt)에 있습니다. VS Code 1.144.1을 설치해 과제 폴더를 열고 공식 GitHub Pull Requests 확장을 설치했습니다. VS Code 계정 메뉴에 `hyoee78 (GitHub)`가 표시되고 GitHub 뷰에 Pull Requests/Issues 항목이 나타나는 것으로 인증을 확인했습니다. [VS Code 연동 확인 기록](evidence/vscode-github-status.txt)과 [GitHub 로그인 화면 캡처](evidence/vscode-github-account.jpg)를 참고하세요. 비밀번호/토큰/인증 코드는 문서나 로그에 기록하지 않습니다.
 
 ## 재현과 증거
 
