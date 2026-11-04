@@ -7,9 +7,9 @@
 - [x] Bind mount host change before/after
 - [x] Named volume contents remain after container deletion
 - [x] Browser page screenshot: web-8080-content.png (Firefox capture tool; page content only)
-- [ ] Browser screenshot with address bar and response visible together
+- [ ] Browser screenshot with address bar and response visible together (the page was visually verified at http://localhost:8080, but this screen capture could not be saved from the current automation environment)
 - [x] Git local config: ../README.md and git-local-status.txt (email masked)
 - [x] GitHub public repo Push and remote hash: github-push-status.txt
-- [ ] VS Code/GitHub integration screenshot
+- [x] VS Code GitHub account integration verified in the Accounts menu and GitHub extension view: vscode-github-status.txt (screenshot not saved)
 
 Do not add credentials, tokens, passwords, private keys, or one-time codes.
